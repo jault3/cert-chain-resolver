@@ -2,9 +2,6 @@
 
 set -eu
 
-
-cd cert-chain-resolver
-
 for GOOS in linux darwin windows; do
     GOARCH="amd64"
 
@@ -15,5 +12,5 @@ for GOOS in linux darwin windows; do
         OUT="${OUT}.exe"
     fi
 
-    GOOS="$GOOS" GOARCH="$GOARCH" go build -o "../out/${GOOS}_${GOARCH}/${OUT}"
+    GOOS="$GOOS" GOARCH="$GOARCH" go build -o "./out/${GOOS}_${GOARCH}/${OUT}"
 done

@@ -1,9 +1,10 @@
 package main
 
 import (
-	flags "github.com/jessevdk/go-flags"
 	"io"
 	"os"
+
+	flags "github.com/jessevdk/go-flags"
 )
 
 type FlagOptions struct {
